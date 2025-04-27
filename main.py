@@ -225,7 +225,7 @@ def main():
     conn = conectar_banco()
     cursor = conn.cursor()
 
-    df = ler_arquivo_excel('C:/Users/gusta/OneDrive/Desktop/Arquivo/dados_importacao.xlsx')
+    df = ler_arquivo_excel('dados_importacao.xlsx')
 
     importados = 0
     nao_importados = []

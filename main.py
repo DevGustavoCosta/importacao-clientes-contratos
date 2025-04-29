@@ -161,10 +161,12 @@ def tratar_cep(cep):
     else:
         return None
     
-#Função para tratar telefone
+# Função para tratar telefone
 def tratar_telefone(telefone):
     if telefone and isinstance(telefone, str):
-        return telefone.split('.')[0]
+        telefone = telefone.split('.')[0]
+        telefone = re.sub(r'\D', '', telefone)
+        return telefone
     elif isinstance(telefone, (int, float)):
         return str(int(telefone))
     return telefone
